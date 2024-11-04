@@ -1,4 +1,6 @@
 ﻿using Proyecto2024.BD.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace Proyecto2024.Server.Repositorio
 {

@@ -29,6 +29,6 @@ namespace Proyecto2024.BD.Data.Entity
         public int UsuarioID { get; set; }
         public Usuario Usuario { get; set; }
         public List<Usuario> Usuarios { get; set; }
-
+        public int Id { get; set; }
     }
 }

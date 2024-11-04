@@ -9,6 +9,8 @@ namespace Proyecto2024.Server.Controllers
     {
         public readonly Context context;
 
+        public string FeCita { get; private set; }
+
         public CitasControllers(Context context)
         {
             this.context = context;
