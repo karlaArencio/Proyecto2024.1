@@ -10,7 +10,7 @@ namespace Proyecto2024.BD.Data.Entity
 {
     [Index(nameof(CDocumentoID), nameof(NumDoc), Name = "Persona_UQ", IsUnique = true)]
     [Index(nameof(Apellido), nameof(Nombre), Name = "Persona_Apellido_Nombre", IsUnique = false)]
-    [Index(nameof(Genero), nameof(FechaNac), Name = "Persona_Genero_FechaNac", IsUnique = false)]
+   
     public class Persona : EntityBase
     {
         [Required(ErrorMessage = "El numero de documento es obligatorio.")]
@@ -32,14 +32,6 @@ namespace Proyecto2024.BD.Data.Entity
         [Required(ErrorMessage = "El telefono de la persona es obligatorio.")]
         [MaxLength(20, ErrorMessage = "Maximo numero de caracteres {1}.")]
         public string Telefono { get; set; }
-
-        [Required(ErrorMessage = "La fecha de nacimiento de la persona es obligatorio.")]
-        [MaxLength(10, ErrorMessage = "Maximo numero de caracteres {1}.")]
-        public string FechaNac { get; set; }
-
-        [Required(ErrorMessage = "El genero de la persona es obligatorio.")]
-        [MaxLength(9, ErrorMessage = "Maximo numero de caracteres {1}.")]
-        public string Genero { get; set; }
 
         [Required(ErrorMessage = "La clase de documento es obligatorio.")]
         public int CDocumentoID { get; set; }
